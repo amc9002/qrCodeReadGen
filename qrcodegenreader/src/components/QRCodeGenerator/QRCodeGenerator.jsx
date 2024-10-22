@@ -21,17 +21,25 @@ export const QRCodeGenerator = () => {
     }
 
     return (
-        <div>
-            {result !== '' && <QRCodeSVG value={result} />}
-            <input className={s.input} type="text" 
+        <div className={s.container}>
+            
+            <input className={s.input} 
+                type="text" 
                 placeholder="Enter text"
                 value={value}
                 onChange={onChangeHandler}
             />
 
-            <button type="button" onClick={onClickHandler}>
+            <button type="button" className={s.button} onClick={onClickHandler}>
                 Generate QR code
             </button>
+
+            {result !== '' && (
+            <div className={s.qrWrapper}>    
+                <QRCodeSVG value={result} size={200}/>
+            </div>
+            )}
+
         </div>
     );
 }
