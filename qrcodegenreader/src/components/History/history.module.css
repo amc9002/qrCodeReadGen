@@ -1,0 +1,9 @@
+.list {
+    margin: 10px 10px;
+}
+
+.list span {
+    margin-left: 20px;
+    color: blue;
+    font-size: 20px;
+}
